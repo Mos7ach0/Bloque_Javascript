@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Párrafo</title>
+</head>
+<body>
+    <h1>Añadir Nuevo Párrafo</h1>
+    <input type="text" id="texto" placeholder="Introduce el texto para el nuevo párrafo">
+    <button id="boton">Añadir Párrafo</button>
+    <div id="contenedor"></div>
+
+    <script>
+        document.getElementById('boton').addEventListener('click', function() {
+            // Obtener el texto proporcionado por el usuario
+            var texto = document.getElementById('texto').value;
+            
+            // Crear un nuevo elemento párrafo
+            var nuevoParrafo = document.createElement('p');
+            
+            // Asignar el texto proporcionado al nuevo párrafo
+            nuevoParrafo.textContent = texto;
+            
+            // Agregar el nuevo párrafo al contenedor
+            document.getElementById('contenedor').appendChild(nuevoParrafo);
+        });
+    </script>
+</body>
+</html>
